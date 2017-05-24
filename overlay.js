@@ -36,14 +36,19 @@ function checkKey(e) {
     {
        case 38:
        case 40:
+       div.innerHTML = "<img src='https://frvisser.github.io/Hilde_Overlay/img/mask-2.png' style='height: 100%; width: 100%;'>";
        $('#showdiv').fadeIn(80)
        break;
 
        case 37:
+       div.innerHTML = "<img src='https://frvisser.github.io/Hilde_Overlay/img/mask.png' style='height: 100%; width: 100%;'>";
+       $('#showdiv').fadeIn(80)
        console.log("left")
        break;
 
        case 39:
+       div.innerHTML = "<img src='https://frvisser.github.io/Hilde_Overlay/img/mask.png' style='height: 100%; width: 100%;'>";
+       $('#showdiv').fadeIn(80)
        console.log("right")
        break;
 
