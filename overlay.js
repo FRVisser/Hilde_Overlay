@@ -1,6 +1,7 @@
 console.log('init');
 
 document.onkeydown = checkKey;
+document.onkeyup = fade_out;
 
 var div = document.createElement("div");
 div.id = "showdiv";
@@ -16,6 +17,7 @@ div.style.left = "0";
 //hier de inhoud van de div
  div.innerHTML = "<img src='https://frvisser.github.io/Hilde_Overlay/img/mask-2.png' style='height: 100%; width: 100%;'>";
  div.style.display = "none";
+
 
 
 //hoi x 1000
@@ -34,8 +36,9 @@ function checkKey(e) {
         //maak een nieuwe div
 
 
-
-                $('#showdiv').fadeIn(80).fadeOut(80);
+                // if (e.onkeydown) {
+                $('#showdiv').fadeIn(80);
+              // }
 
                 $('*').on('click', function(){
                   // $('#underlay').stop(true, true).show().fadeOut(100);
@@ -55,3 +58,8 @@ function checkKey(e) {
     }
 
 }
+
+function fade_out(e) {
+
+    $('#showdiv').fadeOut(80);
+  }
