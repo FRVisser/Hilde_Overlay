@@ -32,29 +32,25 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '38' | e.keyCode == '40') {
-        //maak een nieuwe div
+    switch (e.keyCode)
+    {
+       case 38:
+       case 40:
+       $('#showdiv').fadeIn(80)
+       break;
 
-
-                // if (e.onkeydown) {
-                $('#showdiv').fadeIn(80);
-              // }
-
-                $('*').on('click', function(){
-                  // $('#underlay').stop(true, true).show().fadeOut(100);
-
-                });
-
-
-    }
-    else if (e.keyCode == '40') {
-        console.log("down")
-    }
-    else if (e.keyCode == '37') {
+       case 37:
        console.log("left")
-    }
-    else if (e.keyCode == '39') {
+       break;
+
+       case 39:
        console.log("right")
+       break;
+
+       default:
+       console.log("other key")
+       break;
+
     }
 
 }
